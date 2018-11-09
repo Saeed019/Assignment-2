@@ -34,10 +34,12 @@ public:
 	string get_eye_color();
 	string get_hair_color();
 
+	void print();
+
 private:
 	string name;
 	string fatherName;
-	string mothername;
+	string motherName;
 	string maritalStatus;
 	string nationalId;
 	string spouseName;
