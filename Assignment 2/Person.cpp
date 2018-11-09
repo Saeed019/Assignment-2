@@ -20,13 +20,21 @@ Person::Person()
 	 hairColor = "";
 
 }
+bool nid_checker(string nationalId)
+{
+	return nationalId.length() == 11;
+}
+
 Person::Person(string name, string fatherName, string motherName, string maritalStatus, string nationalId, string spouseName, string presentAddress, string permanentAddress, float height, float weight, string eyeColor, string hairColor)
 {
 	this->name = name;
 	this->fatherName = fatherName;
 	this->motherName = motherName;
 	this->maritalStatus= maritalStatus;
-	this->nationalId = nationalId;
+	if (nid_checker(nationalId))
+		this->nationalId = nationalId;
+	else
+		cout << "Your national ID is not correct!!" << endl;
 	this->spouseName = spouseName;
 	this->presentAddress = presentAddress;
 	this->permanentAddress = permanentAddress;
@@ -70,9 +78,14 @@ void Person::set_marital_status(string maritalStatus)
 {
 	this->maritalStatus = maritalStatus;
 }
+
 void Person::set_national_id(string nationalId)
 {
-	this->nationalId = nationalId;
+	if (nid_checker(nationalId))
+		this->nationalId = nationalId;
+	else
+		cout << "Your national ID is not correct!!" << endl;
+
 }
 void Person::set_spouse_name(string spouseName)
 {
