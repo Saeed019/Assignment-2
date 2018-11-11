@@ -115,12 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="NumberInfo.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PhoneNumber.h" />
     <ClInclude Include="UnsortedType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NumberInfo.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="PhoneNumber.cpp" />
     <ClCompile Include="UnsortedType.cpp" />

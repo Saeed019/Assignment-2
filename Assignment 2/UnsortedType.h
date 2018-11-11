@@ -1,3 +1,4 @@
+#include "NumberInfo.h"
 #ifndef UNSORTEDTYPE_H_INCLUDED
 #define UNSORTEDTYPE_H_INCLUDED
 template<class ItemType>
@@ -18,13 +19,12 @@ public:
     void RetrieveItem(ItemType&,bool&);
     void InsertItem(ItemType);
     void DeleteItem(ItemType);
-    void ResetList();
-    ItemType GetNextItem();
+    
     void print();
 private:
     NodeType * listData;
     int length;
-    NodeType *currentPos;
+    
 
 };
 

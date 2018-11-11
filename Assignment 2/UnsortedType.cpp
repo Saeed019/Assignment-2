@@ -3,12 +3,13 @@
 #include <exception>
 using namespace std;
 
+
 template<class ItemType>
 UnsortedType<ItemType>::UnsortedType()
 {
     length=0;
     listData=NULL;
-    currentPos=NULL;
+    
 
 }
 template<class ItemType>
@@ -67,24 +68,8 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
 
     }
 }
-template<class ItemType>
-void UnsortedType<ItemType>::ResetList()
-{
-    currentPos = NULL;
-}
-template<class ItemType>
 
-ItemType UnsortedType<ItemType>::GetNextItem()
-{
-    if(currentPos == NULL)
-    {
-        currentPos =listData;
 
-    }
-    else
-        currentPos = currentPos->next;
-    return currentPos->info;
-}
 template<class ItemType>
 void UnsortedType<ItemType>::RetrieveItem(ItemType&item,bool&found)
 {

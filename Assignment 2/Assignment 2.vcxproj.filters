@@ -24,6 +24,9 @@
     <ClInclude Include="UnsortedType.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="NumberInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Person.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UnsortedType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
