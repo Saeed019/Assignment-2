@@ -46,3 +46,8 @@ void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator
 	}
 }
 
+void PhoneNumber::print()
+{
+	numberList.print();
+}
+

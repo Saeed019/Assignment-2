@@ -42,8 +42,6 @@ Person::Person(string name, string fatherName, string motherName, string marital
 	this->weight = weight;
 	this->eyeColor = eyeColor;
 	this->hairColor = name;
-	this->name = name;
-
 }
 
 

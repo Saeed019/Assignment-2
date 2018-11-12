@@ -36,7 +36,7 @@ public:
 
 	void print();
 
-private:
+protected:
 	string name;
 	string fatherName;
 	string motherName;

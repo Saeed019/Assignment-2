@@ -14,7 +14,7 @@ public:
 	~PhoneNumber();
 	void add_phone_number(string, string);
 	void remove_phone_number(string, string);
-
+	void print();
 private:
 	UnsortedType<NumberInfo> numberList;
 };
