@@ -1,7 +1,5 @@
 #include "CustomerData.h"
 
-
-
 CustomerData::CustomerData()
 {
 }
@@ -35,9 +33,9 @@ CustomerData::~CustomerData()
 {
 }
 
-void CustomerData::print1()
+void CustomerData::print()
 {
-	this->print();
+	this->print_person();
 	numberList.print();
 }
 
@@ -49,4 +47,10 @@ void CustomerData::insert_phone(string mobileNumber, string numberOperator)
 void CustomerData::delete_phone(string mobileNumber, string numberOperator)
 {
 	numberList.remove_phone_number(mobileNumber, numberOperator);
+}
+
+bool CustomerData::is_equal(CustomerData customer)
+{
+
+	return (customer.get_national_id().compare(nationalId) == 0);
 }

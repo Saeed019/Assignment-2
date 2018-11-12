@@ -3,7 +3,6 @@
 #include<iostream>
 #include"UnsortedType.h"
 #include "NumberInfo.h"
-
 using namespace std;
 
 class PhoneNumber

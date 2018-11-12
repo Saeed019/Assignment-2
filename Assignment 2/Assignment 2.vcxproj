@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CustomerData.h" />
+    <ClInclude Include="CustomerList.h" />
     <ClInclude Include="NumberInfo.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PhoneNumber.h" />
@@ -123,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CustomerData.cpp" />
+    <ClCompile Include="CustomerList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NumberInfo.cpp" />
     <ClCompile Include="Person.cpp" />

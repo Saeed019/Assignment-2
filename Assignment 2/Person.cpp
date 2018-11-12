@@ -2,8 +2,6 @@
 #include<iostream>
 using namespace std;
 
-
-
 Person::Person()
 {
 	 name = "";
@@ -163,7 +161,7 @@ string Person::get_hair_color()
 {
 	return hairColor;
 }
-void Person::print()
+void Person::print_person()
 {
 	cout << "Personal information: " << endl;
 	cout << "Name: " << name << endl;
@@ -178,6 +176,4 @@ void Person::print()
 	cout << "Weight: " << weight << endl;
 	cout << "Eye Color: " << eyeColor << endl;
 	cout << "Hair Color: " << hairColor << endl;
-
-
 }

@@ -1,4 +1,3 @@
-#include "NumberInfo.h"
 #ifndef UNSORTEDTYPE_H_INCLUDED
 #define UNSORTEDTYPE_H_INCLUDED
 template<class ItemType>

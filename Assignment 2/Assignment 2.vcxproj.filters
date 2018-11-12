@@ -30,6 +30,9 @@
     <ClInclude Include="CustomerData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CustomerList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Person.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CustomerData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

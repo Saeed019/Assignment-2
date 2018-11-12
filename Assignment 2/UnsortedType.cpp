@@ -1,9 +1,12 @@
 #include"UnsortedType.h"
+#include "CustomerData.h"
+#include "NumberInfo.h"
+
 #include<iostream>
 #include <exception>
 using namespace std;
 template class UnsortedType<NumberInfo>;
-
+template class UnsortedType<CustomerData>;
 template<class ItemType>
 UnsortedType<ItemType>::UnsortedType()
 {
