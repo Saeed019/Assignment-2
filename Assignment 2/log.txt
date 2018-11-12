@@ -1,0 +1,61 @@
+commit e4ed2215460d156c710bb985f696b523d9ee27ff
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sun Nov 11 14:19:11 2018 +0600
+
+    phoneNumber class and Number info class created and implemented.
+
+
+commit c9287265cf09451c874817a5677c63b158f4859c
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sun Nov 11 01:00:35 2018 +0600
+
+    Unsorted .cpp and .h added.
+
+
+commit 245028d85c9a6d2c18adebbd2bb0b3699f337c50
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 03:38:13 2018 +0600
+
+    Changing national_id() in Person.cpp.
+
+
+commit cada57b2b06e92a45053d53a1339ed97b3b16041
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 03:27:29 2018 +0600
+
+    Checked person class worked correctly.
+
+
+commit 8929924cf508027eadd836eda375ade6fedb5674
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 03:11:10 2018 +0600
+
+    Person.cpp has been implemented.
+
+
+commit 028e791a0690c41f1cacaec70b4e085e8722f75e
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 02:06:15 2018 +0600
+
+    Person.h has been completed.
+
+
+commit 3aff1597e2ef2aa3ea4759a82fba52a146b87907
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 01:32:57 2018 +0600
+
+    Creating a person class.
+
+
+commit 095b536df6adf394e1598768fadc35ad2791771d
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 01:29:46 2018 +0600
+
+    Add project files.
+
+
+commit 62559b6804d7f3b0ea76575405eeb9ea616c2309
+Author: abusa <abusa@DESKTOP-1IOICRI>
+Date:   Sat Nov 10 01:29:43 2018 +0600
+
+    Add .gitignore and .gitattributes.

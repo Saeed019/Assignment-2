@@ -14,6 +14,7 @@ public:
 
 	string get_mobile_number();
 	string get_number_operator();
+	void print();
 
 private:
 	string mobileNumber;

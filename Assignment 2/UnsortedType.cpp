@@ -2,7 +2,7 @@
 #include<iostream>
 #include <exception>
 using namespace std;
-
+template class UnsortedType<NumberInfo>;
 
 template<class ItemType>
 UnsortedType<ItemType>::UnsortedType()
@@ -48,7 +48,7 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
 {
     NodeType* location = listData;
     NodeType* tempLocation = NULL;
-    if(item == listData->info)
+    if((listData->info.is_equal(item)))
     {
         tempLocation = location;
         listData = listData->next;
@@ -56,7 +56,7 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
     }
     else
     {
-        while(!(item == (location->next)->info))
+        while(!(location->next->info.is_equal(item)))
         {
             location = location->next;
             tempLocation = location->next;
@@ -69,26 +69,6 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
     }
 }
 
-
-template<class ItemType>
-void UnsortedType<ItemType>::RetrieveItem(ItemType&item,bool&found)
-{
-    NodeType* location = listData;
-    bool moreToSearch = (location !=NULL);
-    found = false;
-    while(moreToSearch && !found)
-    {
-        if(item == location->info)
-            found = true;
-        else
-        {
-
-
-            location = location->next;
-            moreToSearch = (location!=NULL);
-        }
-    }
-}
 template<class ItemType>
 void UnsortedType<ItemType>::MakeEmpty()
 {
@@ -101,6 +81,7 @@ void UnsortedType<ItemType>::MakeEmpty()
 
     }
 }
+
 template<class ItemType>
 UnsortedType<ItemType>::~UnsortedType()
 {
@@ -113,9 +94,9 @@ void UnsortedType<ItemType>::print()
     NodeType *temp =listData;
    while(temp!=NULL)
    {
-       cout<<temp->info;
+       temp->info.print();
        temp=temp->next;
-        cout<<" ";
+        cout<<endl;
    }
 }
 

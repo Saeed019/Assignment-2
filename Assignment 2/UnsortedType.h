@@ -16,7 +16,6 @@ public:
     bool IsFull();
     int LengthIs();
     void MakeEmpty();
-    void RetrieveItem(ItemType&,bool&);
     void InsertItem(ItemType);
     void DeleteItem(ItemType);
     

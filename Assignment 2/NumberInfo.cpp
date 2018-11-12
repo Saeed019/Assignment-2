@@ -1,4 +1,5 @@
 #include "NumberInfo.h"
+#include <string>
 
 NumberInfo::NumberInfo()
 {
@@ -35,6 +36,11 @@ string NumberInfo::get_mobile_number()
 string NumberInfo::get_number_operator()
 {
 	return numberOperator;
+}
+
+void NumberInfo::print()
+{
+	cout << "Mobile Number: " << mobileNumber <<"Operator: "<<numberOperator<< endl;
 }
 
 void NumberInfo::set_mobile_number(string mobileNumber)
