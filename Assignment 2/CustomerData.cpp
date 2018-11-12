@@ -9,7 +9,9 @@ bool nid_checker1(string nationalId)
 {
 	return nationalId.length() == 11;
 }
-CustomerData::CustomerData(string name, string fatherName, string motherName, string maritalStatus, string nationalId, string spouseName, string presentAddress, string permanentAddress, float height, float weight, string eyeColor, string hairColor,string mobile_number,string number_operator)
+CustomerData::CustomerData(string name, string fatherName, string motherName, string maritalStatus, 
+	string nationalId, string spouseName, string presentAddress, string permanentAddress, float height,
+	         float weight, string eyeColor, string hairColor,string mobile_number,string number_operator)
 {
 	this->name = name;
 	this->fatherName = fatherName;
@@ -33,7 +35,7 @@ CustomerData::~CustomerData()
 {
 }
 
-void CustomerData::print()
+void CustomerData::print1()
 {
 	this->print();
 	numberList.print();
