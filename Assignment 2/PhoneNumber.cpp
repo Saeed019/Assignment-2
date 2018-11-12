@@ -42,8 +42,13 @@ void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator
 	}
 	else
 	{
-		numberList.DeleteItem(number);
+		numberList.DeleteItem(mobileNumber);
 	}
+}
+
+bool PhoneNumber::search_mobile_number(string mobileNumber)
+{
+	return numberList.search(mobileNumber);
 }
 
 void PhoneNumber::print()

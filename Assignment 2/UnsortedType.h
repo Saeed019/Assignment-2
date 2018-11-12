@@ -1,5 +1,7 @@
 #ifndef UNSORTEDTYPE_H_INCLUDED
 #define UNSORTEDTYPE_H_INCLUDED
+#include <string>
+using namespace std;
 template<class ItemType>
 class UnsortedType
 {
@@ -16,14 +18,15 @@ public:
     int LengthIs();
     void MakeEmpty();
     void InsertItem(ItemType);
-    void DeleteItem(ItemType);
-    
-    void print();
+    void DeleteItem(string);
+	bool search(string);
+	ItemType GetNextItem();
+	void ResetList();
+	void print();
 private:
     NodeType * listData;
     int length;
-    
-
+	NodeType *currentPos;
 };
 
 

@@ -33,6 +33,11 @@ CustomerData::~CustomerData()
 {
 }
 
+bool CustomerData::check_nid(string nId)
+{
+	return nId.compare(nId)==0;
+}
+
 void CustomerData::print()
 {
 	this->print_person();
@@ -49,8 +54,7 @@ void CustomerData::delete_phone(string mobileNumber, string numberOperator)
 	numberList.remove_phone_number(mobileNumber, numberOperator);
 }
 
-bool CustomerData::is_equal(CustomerData customer)
+bool CustomerData::is_equal(string nId)
 {
-
-	return (customer.get_national_id().compare(nationalId) == 0);
+	return (nId.compare(nationalId) == 0);
 }

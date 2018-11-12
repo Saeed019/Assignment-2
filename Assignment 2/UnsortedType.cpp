@@ -1,19 +1,19 @@
 #include"UnsortedType.h"
 #include "CustomerData.h"
 #include "NumberInfo.h"
-
+#include <string>
 #include<iostream>
 #include <exception>
 using namespace std;
 template class UnsortedType<NumberInfo>;
 template class UnsortedType<CustomerData>;
+
 template<class ItemType>
 UnsortedType<ItemType>::UnsortedType()
 {
     length=0;
     listData=NULL;
-    
-
+	currentPos = NULL;
 }
 template<class ItemType>
 int UnsortedType<ItemType>::LengthIs()
@@ -44,10 +44,9 @@ void UnsortedType<ItemType>::InsertItem(ItemType item)
  location->next=listData;
 listData = location;
  length++;
-
 }
 template<class ItemType>
-void UnsortedType<ItemType>::DeleteItem(ItemType item)
+void UnsortedType<ItemType>::DeleteItem(string item)
 {
     NodeType* location = listData;
     NodeType* tempLocation = NULL;
@@ -55,7 +54,6 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
     {
         tempLocation = location;
         listData = listData->next;
-
     }
     else
     {
@@ -64,7 +62,6 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
             location = location->next;
             tempLocation = location->next;
             location->next = (location->next)->next;
-
         }
         delete tempLocation;
         length--;
@@ -73,22 +70,34 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
 }
 
 template<class ItemType>
+bool UnsortedType<ItemType>::search(string item)
+{
+	NodeType *temp = listData;
+	while (temp != NULL)
+	{
+		if (temp->info.is_equal(item))
+			return true;
+	}
+	return false;
+}
+
+template<class ItemType>
 void UnsortedType<ItemType>::MakeEmpty()
 {
     NodeType* tempPtr;
     while(listData!=NULL)
     {
+		currentPos = NULL;
         tempPtr = listData;
         listData= listData->next;
         delete tempPtr;
-
     }
 }
 
 template<class ItemType>
 UnsortedType<ItemType>::~UnsortedType()
 {
-    MakeEmpty();
+
 }
 
 template<class ItemType>
@@ -102,4 +111,20 @@ void UnsortedType<ItemType>::print()
         cout<<endl;
    }
 }
+template<class ItemType>
+void UnsortedType<ItemType>::ResetList()
+{
+	currentPos = NULL;
+}
+template<class ItemType>
 
+ItemType UnsortedType<ItemType>::GetNextItem()
+{
+	if (currentPos == NULL)
+	{
+		currentPos = listData;
+	}
+	else
+		currentPos = currentPos->next;
+	return currentPos->info;
+}
