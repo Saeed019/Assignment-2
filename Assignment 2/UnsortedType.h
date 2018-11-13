@@ -20,7 +20,7 @@ public:
     void InsertItem(ItemType);
     void DeleteItem(string);
 	bool search(string);
-	ItemType GetNextItem();
+	ItemType* GetNextItem();
 	void ResetList();
 	void print();
 private:

@@ -57,14 +57,16 @@ void UnsortedType<ItemType>::DeleteItem(string item)
     }
     else
     {
-        while(!(location->next->info.is_equal(item)))
+        while(location->next->info.is_equal(item))
         {
             location = location->next;
-            tempLocation = location->next;
-            location->next = (location->next)->next;
+            tempLocation = location;
+			location->next = NULL;
+			break;
         }
         delete tempLocation;
         length--;
+		cout << length;
 
     }
 }
@@ -120,7 +122,7 @@ void UnsortedType<ItemType>::ResetList()
 }
 template<class ItemType>
 
-ItemType UnsortedType<ItemType>::GetNextItem()
+ItemType* UnsortedType<ItemType>::GetNextItem()
 {
 	if (currentPos == NULL)
 	{
@@ -128,6 +130,6 @@ ItemType UnsortedType<ItemType>::GetNextItem()
 	}
 	else
 		currentPos = currentPos->next;
-	return currentPos->info;
+	return &(currentPos->info);
 }
 

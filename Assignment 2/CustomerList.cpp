@@ -20,12 +20,14 @@ CustomerList::~CustomerList()
 
 bool CustomerList::search_mobile(string mobileNumber)
 {
+	CustomerData *temp;
 	bool found = false;
 	int length = customerList.LengthIs();
 	customerList.ResetList();
 	while (length--)
 	{
-		found = customerList.GetNextItem().check_mobile(mobileNumber);
+		temp = customerList.GetNextItem();
+		found = temp->check_mobile(mobileNumber);
 	}
 	return found;
 }
@@ -65,6 +67,7 @@ void CustomerList::insert_customer(string name, string fatherName, string mother
 
 void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,string numberOperator)
 {
+	CustomerData *temp;
 	bool found = false;
 	int length = customerList.LengthIs();
 	customerList.ResetList();
@@ -75,7 +78,8 @@ void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,s
 			customerList.ResetList();
 			while (length--)
 			{
-				found = customerList.GetNextItem().insert_phone(nationalId, mobileNumber, numberOperator);
+				temp = customerList.GetNextItem();
+				found = temp->insert_phone(nationalId, mobileNumber, numberOperator);
 			}
 			if (!found)
 			{
@@ -90,6 +94,12 @@ void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,s
 	{
 		cout << "National Id is Nit Correct." << endl;
 	}
+}
+
+void CustomerList::delete_customer(string nId)
+{
+
+	customerList.DeleteItem(nId);
 }
 
 void CustomerList::print()

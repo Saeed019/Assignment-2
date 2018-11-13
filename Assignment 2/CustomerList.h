@@ -11,6 +11,7 @@ public:
 	bool search_mobile(string);
 	void insert_customer(string, string, string, string, string, string, string, string, float, float, string, string, string, string);
 	void insert_mobile_number(string, string, string);
+	void delete_customer(string);
 	void print();
 private:
 	UnsortedType<CustomerData> customerList;
