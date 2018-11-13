@@ -3,10 +3,6 @@
 CustomerData::CustomerData()
 {
 }
-bool nid_checker1(string nationalId)
-{
-	return nationalId.length() == 11;
-}
 CustomerData::CustomerData(string name, string fatherName, string motherName, string maritalStatus, 
 	string nationalId, string spouseName, string presentAddress, string permanentAddress, float height,
 	         float weight, string eyeColor, string hairColor,string mobile_number,string number_operator)
@@ -15,10 +11,7 @@ CustomerData::CustomerData(string name, string fatherName, string motherName, st
 	this->fatherName = fatherName;
 	this->motherName = motherName;
 	this->maritalStatus = maritalStatus;
-	if (nid_checker1(nationalId))
-		this->nationalId = nationalId;
-	else
-		cout << "Your national ID is not correct!!" << endl;
+	this->nationalId = nationalId;
 	this->spouseName = spouseName;
 	this->presentAddress = presentAddress;
 	this->permanentAddress = permanentAddress;
@@ -38,15 +31,29 @@ bool CustomerData::check_nid(string nId)
 	return nId.compare(nId)==0;
 }
 
+bool CustomerData::check_mobile(string mobileNumber)
+{
+	return (numberList.search_mobile_number(mobileNumber));
+}
+
 void CustomerData::print()
 {
 	this->print_person();
 	numberList.print();
 }
 
-void CustomerData::insert_phone(string mobileNumber, string numberOperator)
+bool CustomerData::insert_phone(string nId,string mobileNumber, string numberOperator)
 {
-	numberList.add_phone_number(mobileNumber, numberOperator);
+	if (nId.compare(nationalId) == 0)
+	{
+		numberList.add_phone_number(mobileNumber, numberOperator);
+		return true;
+
+	}
+	else
+	{
+		return false;
+	}
 }
 
 void CustomerData::delete_phone(string mobileNumber, string numberOperator)

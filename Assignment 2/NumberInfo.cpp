@@ -40,7 +40,7 @@ string NumberInfo::get_number_operator()
 
 void NumberInfo::print()
 {
-	cout << "Mobile Number: " << mobileNumber <<"Operator: "<<numberOperator<< endl;
+	cout << "Mobile Number: " << mobileNumber<<"    " <<"Operator: "<<numberOperator<< endl;
 }
 
 void NumberInfo::set_mobile_number(string mobileNumber)

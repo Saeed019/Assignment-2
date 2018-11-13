@@ -27,9 +27,6 @@ void PhoneNumber::add_phone_number(string mobileNumber, string numberOperator)
 	{
 		numberList.InsertItem(number);
 	}
-
-
-
 }
 
 void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator)

@@ -42,7 +42,7 @@ void UnsortedType<ItemType>::InsertItem(ItemType item)
  location = new NodeType;
  location->info=item;
  location->next=listData;
-listData = location;
+ listData = location;
  length++;
 }
 template<class ItemType>
@@ -77,6 +77,8 @@ bool UnsortedType<ItemType>::search(string item)
 	{
 		if (temp->info.is_equal(item))
 			return true;
+		temp = temp->next;
+
 	}
 	return false;
 }
@@ -128,3 +130,4 @@ ItemType UnsortedType<ItemType>::GetNextItem()
 		currentPos = currentPos->next;
 	return currentPos->info;
 }
+
