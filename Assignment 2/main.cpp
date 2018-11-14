@@ -10,7 +10,8 @@ int main()
 		105.0, 24, "eyeColor", "Hair Color", "11797800497", "Grameen Phone");
 	a.insert_mobile_number("National Id", "21797800497", "Grameen Phone");
 	a.delete_customer("National Id");
-	a.print();
+	a.remove_mobile_number("11797800497");
+a.print();
 	getchar();
 	return 0;
 

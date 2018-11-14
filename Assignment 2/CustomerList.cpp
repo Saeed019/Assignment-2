@@ -98,8 +98,31 @@ void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,s
 
 void CustomerList::delete_customer(string nId)
 {
-
 	customerList.DeleteItem(nId);
+}
+
+void CustomerList::remove_mobile_number(string mobileNumber)
+{
+	CustomerData *temp;
+	bool found = false;
+	int length = customerList.LengthIs();
+	customerList.ResetList();
+		if (search_mobile(mobileNumber))
+		{
+			customerList.ResetList();
+			while (length--)
+			{
+				temp = customerList.GetNextItem();
+				found = temp->delete_phone(temp->get_national_id(), mobileNumber);
+			}
+			if (!found)
+			{
+				cout << "This National Id is Not Resistered." << endl;
+			}
+		}
+		else
+			cout << "This Number is Not Resistered." << endl;
+
 }
 
 void CustomerList::print()

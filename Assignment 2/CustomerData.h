@@ -13,7 +13,7 @@ public:
 	bool check_mobile(string);
 	void print();
 	bool insert_phone(string,string, string);
-	void delete_phone(string, string);
+	bool delete_phone(string, string);
 	bool is_equal(string);
 private:
 	PhoneNumber numberList;

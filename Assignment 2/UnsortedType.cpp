@@ -57,17 +57,17 @@ void UnsortedType<ItemType>::DeleteItem(string item)
     }
     else
     {
-        while(location->next->info.is_equal(item))
+        while(!(location->next->info.is_equal(item)))
         {
+			tempLocation = location;
             location = location->next;
-            tempLocation = location;
-			location->next = NULL;
-			break;
         }
+		if (location->next != NULL)
+			location->next = location->next->next;
+		else
+			location->next = NULL;
         delete tempLocation;
         length--;
-		cout << length;
-
     }
 }
 

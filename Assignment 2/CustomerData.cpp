@@ -56,9 +56,18 @@ bool CustomerData::insert_phone(string nId,string mobileNumber, string numberOpe
 	}
 }
 
-void CustomerData::delete_phone(string mobileNumber, string numberOperator)
+bool CustomerData::delete_phone(string nId, string mobileNumber)
 {
-	numberList.remove_phone_number(mobileNumber, numberOperator);
+	if (nId.compare(nationalId) == 0)
+	{
+		numberList.remove_phone_number(nId, mobileNumber);
+		return true;
+
+	}
+	else
+	{
+		return false;
+	}
 }
 
 bool CustomerData::is_equal(string nId)
