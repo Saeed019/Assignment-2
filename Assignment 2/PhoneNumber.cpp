@@ -47,7 +47,7 @@ bool PhoneNumber::search_mobile_number(string mobileNumber)
 	return numberList.search(mobileNumber);
 }
 
-void PhoneNumber::change_operator(string mobileNumber, string newOperator)
+bool PhoneNumber::change_operator(string mobileNumber, string newOperator)
 {
 	NumberInfo *temp;
 	int length = numberList.LengthIs();
@@ -58,9 +58,16 @@ void PhoneNumber::change_operator(string mobileNumber, string newOperator)
 			if (temp->get_mobile_number().compare(mobileNumber) == 0)
 			{
 				temp->set_number_operator(newOperator);
+				return true;
 			}
 	}
+	return false;
 
+}
+
+int PhoneNumber::get_length()
+{
+	return numberList.LengthIs();
 }
 
 void PhoneNumber::print()

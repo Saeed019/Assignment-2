@@ -15,7 +15,8 @@ public:
 	bool insert_phone(string,string, string);
 	void delete_phone(string);
 	bool is_equal(string);
-	bool change_operator(string,string,string);
+	bool change_operator(string,string);
+	int count_number();
 private:
 	PhoneNumber numberList;
 };

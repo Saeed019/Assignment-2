@@ -28,6 +28,8 @@ bool CustomerList::search_mobile(string mobileNumber)
 	{
 		temp = customerList.GetNextItem();
 		found = temp->check_mobile(mobileNumber);
+		if(found)
+		break;
 	}
 	return found;
 }
@@ -115,9 +117,17 @@ void CustomerList::remove_mobile_number(string mobileNumber)
 				temp = customerList.GetNextItem();
 				if (temp->check_mobile(mobileNumber))
 				{
-					temp->delete_phone(mobileNumber);
+					if (temp->count_number() == 1)
+					{
+						string nId = temp->get_national_id();
+						customerList.DeleteItem(nId);
+					}
+					else
+						temp->delete_phone(mobileNumber);
 					found = true;
 				}
+				if (found)
+					break;
 			}
 			if (!found)
 			{
@@ -126,7 +136,6 @@ void CustomerList::remove_mobile_number(string mobileNumber)
 		}
 		else
 			cout << "This Number is Not Resistered." << endl;
-
 }
 
 void CustomerList::change_operator(string mobileNumber, string newOperator)
@@ -140,8 +149,11 @@ void CustomerList::change_operator(string mobileNumber, string newOperator)
 		customerList.ResetList();
 		while (length--)
 		{
+
 			temp = customerList.GetNextItem();
-			found = temp->change_operator(temp->get_national_id(), mobileNumber, newOperator);
+			found = temp->change_operator(mobileNumber, newOperator);
+			if (found)
+				break;
 		}
 		if (!found)
 		{

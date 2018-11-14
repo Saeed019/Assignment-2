@@ -20,10 +20,12 @@ void NumberInfo::set_number_operator(string numberOperator)
 	this->numberOperator = numberOperator;
 }
 
-bool NumberInfo::is_equal(string mobileNumber)
+bool NumberInfo::is_equal(string mobileNumbe)
 {
-	if (this->mobileNumber.compare(mobileNumber) == 0)
+	if (this->mobileNumber.compare(mobileNumbe) == 0)
+	{
 		return true;
+	}
 	else
 		return false;
 }

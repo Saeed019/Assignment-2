@@ -7,7 +7,6 @@ class UnsortedType
 {
 struct NodeType
 {
-
 ItemType info;
 NodeType*next;
 };

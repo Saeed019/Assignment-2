@@ -33,7 +33,7 @@ bool CustomerData::check_nid(string nId)
 
 bool CustomerData::check_mobile(string mobileNumber)
 {
-	return (numberList.search_mobile_number(mobileNumber));
+	return numberList.search_mobile_number(mobileNumber);
 }
 
 void CustomerData::print()
@@ -66,15 +66,12 @@ bool CustomerData::is_equal(string nId)
 	return (nId.compare(nationalId) == 0);
 }
 
-bool CustomerData::change_operator(string nId, string mobileNumber, string numberOperator)
+bool CustomerData::change_operator(string mobileNumber, string numberOperator)
 {
-	if (nId.compare(nationalId) == 0)
-	{
-		numberList.change_operator(mobileNumber, numberOperator);
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return numberList.change_operator(mobileNumber, numberOperator);
+}
+
+int CustomerData::count_number()
+{
+	return numberList.get_length();
 }

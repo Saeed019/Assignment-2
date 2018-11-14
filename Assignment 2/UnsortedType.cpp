@@ -75,13 +75,13 @@ void UnsortedType<ItemType>::DeleteItem(string item)
 template<class ItemType>
 bool UnsortedType<ItemType>::search(string item)
 {
-	NodeType *temp = listData;
+	NodeType* temp;
+	temp = listData;
 	while (temp != NULL)
 	{
 		if (temp->info.is_equal(item))
 			return true;
 		temp = temp->next;
-
 	}
 	return false;
 }

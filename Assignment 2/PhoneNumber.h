@@ -14,7 +14,8 @@ public:
 	void add_phone_number(string, string);
 	void remove_phone_number(string);
 	bool search_mobile_number(string);
-	void change_operator(string,string);
+	bool change_operator(string,string);
+	int get_length();
 	void print();
 private:
 	UnsortedType<NumberInfo> numberList;
