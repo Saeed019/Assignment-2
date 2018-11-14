@@ -56,21 +56,25 @@ bool CustomerData::insert_phone(string nId,string mobileNumber, string numberOpe
 	}
 }
 
-bool CustomerData::delete_phone(string nId, string mobileNumber)
+void CustomerData::delete_phone(string mobileNumber)
 {
-	if (nId.compare(nationalId) == 0)
-	{
-		numberList.remove_phone_number(nId, mobileNumber);
-		return true;
-
-	}
-	else
-	{
-		return false;
-	}
+		numberList.remove_phone_number(mobileNumber);
 }
 
 bool CustomerData::is_equal(string nId)
 {
 	return (nId.compare(nationalId) == 0);
+}
+
+bool CustomerData::change_operator(string nId, string mobileNumber, string numberOperator)
+{
+	if (nId.compare(nationalId) == 0)
+	{
+		numberList.change_operator(mobileNumber, numberOperator);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

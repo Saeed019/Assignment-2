@@ -13,8 +13,9 @@ public:
 	bool check_mobile(string);
 	void print();
 	bool insert_phone(string,string, string);
-	bool delete_phone(string, string);
+	void delete_phone(string);
 	bool is_equal(string);
+	bool change_operator(string,string,string);
 private:
 	PhoneNumber numberList;
 };

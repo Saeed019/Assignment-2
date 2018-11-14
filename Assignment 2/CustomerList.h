@@ -13,6 +13,7 @@ public:
 	void insert_mobile_number(string, string, string);
 	void delete_customer(string);
 	void remove_mobile_number(string);
+	void change_operator(string, string);
 	void print();
 private:
 	UnsortedType<CustomerData> customerList;

@@ -54,6 +54,7 @@ void UnsortedType<ItemType>::DeleteItem(string item)
     {
         tempLocation = location;
         listData = listData->next;
+		delete tempLocation;
     }
     else
     {

@@ -92,7 +92,7 @@ void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,s
 	}
 	else
 	{
-		cout << "National Id is Nit Correct." << endl;
+		cout << "National Id is National Id Correct." << endl;
 	}
 }
 
@@ -113,7 +113,11 @@ void CustomerList::remove_mobile_number(string mobileNumber)
 			while (length--)
 			{
 				temp = customerList.GetNextItem();
-				found = temp->delete_phone(temp->get_national_id(), mobileNumber);
+				if (temp->check_mobile(mobileNumber))
+				{
+					temp->delete_phone(mobileNumber);
+					found = true;
+				}
 			}
 			if (!found)
 			{
@@ -123,6 +127,29 @@ void CustomerList::remove_mobile_number(string mobileNumber)
 		else
 			cout << "This Number is Not Resistered." << endl;
 
+}
+
+void CustomerList::change_operator(string mobileNumber, string newOperator)
+{
+	CustomerData *temp;
+	bool found = false;
+	int length = customerList.LengthIs();
+	customerList.ResetList();
+	if (search_mobile(mobileNumber))
+	{
+		customerList.ResetList();
+		while (length--)
+		{
+			temp = customerList.GetNextItem();
+			found = temp->change_operator(temp->get_national_id(), mobileNumber, newOperator);
+		}
+		if (!found)
+		{
+			cout << "This National Id is Not Resistered." << endl;
+		}
+	}
+	else
+		cout << "This Number is Not Resistered." << endl;
 }
 
 void CustomerList::print()
