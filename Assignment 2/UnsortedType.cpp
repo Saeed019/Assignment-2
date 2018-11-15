@@ -113,7 +113,6 @@ void UnsortedType<ItemType>::print()
    {
        temp->info.print();
        temp=temp->next;
-        cout<<endl;
    }
 }
 template<class ItemType>

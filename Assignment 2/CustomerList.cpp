@@ -166,5 +166,6 @@ void CustomerList::change_operator(string mobileNumber, string newOperator)
 
 void CustomerList::print()
 {
+	cout << "List Content-> "<<std::endl;
 	customerList.print();
 }

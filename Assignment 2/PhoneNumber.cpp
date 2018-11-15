@@ -73,5 +73,6 @@ int PhoneNumber::get_length()
 void PhoneNumber::print()
 {
 	numberList.print();
+	cout << endl;
 }
 
